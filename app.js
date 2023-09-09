@@ -29,4 +29,3 @@ day[0].textContent = currentDayOfWeek;
 UTC[0].textContent = currentUTCTimeInSeconds;
 dayTestId.setAttribute("data-testid", `${currentDayOfWeek}`);
 UTCtestId.setAttribute("data-testid", currentUTCTimeInSeconds);
-console.log(dayTestId, UTCtestId);
