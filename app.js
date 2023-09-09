@@ -1,6 +1,9 @@
 const day = document.getElementsByClassName("day");
 const UTC = document.getElementsByClassName("time");
-const name = document.getElementsByClassName("slack_name");
+// Select the HTML element by its data-testid attribute
+const dayTestId = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+const UTCtestId = document.querySelector('[data-testid="currentUTCTime"]');
+
 const currentDate = new Date();
 
 // Get the current UTC time in seconds
@@ -24,3 +27,6 @@ const dayNames = [
 const currentDayOfWeek = dayNames[dayOfWeek];
 day[0].textContent = currentDayOfWeek;
 UTC[0].textContent = currentUTCTimeInSeconds;
+dayTestId.setAttribute("data-testid", `${currentDayOfWeek}`);
+UTCtestId.setAttribute("data-testid", currentUTCTimeInSeconds);
+console.log(dayTestId, UTCtestId);
